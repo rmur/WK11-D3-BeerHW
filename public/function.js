@@ -17,7 +17,11 @@ var requestComplete = function() {
 
   beers.forEach( function(beer){
     var li = document.createElement('li');
+    var img = document.createElement('img');
     li.innerText = beer.name;
+    img.src = beer.image_url;
+    img.width = 50;
+    li.appendChild(img);
     ul.appendChild(li);
   })
 
